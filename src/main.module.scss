@@ -1,0 +1,27 @@
+@import '../lib/bem.scss';
+
+$namespace: 'demo-';
+
+@include b(button) {
+    border: 1px solid #dcdfe6;
+    border-radius: 2px;
+    outline: none;
+    background-color: transparent;
+    
+    color: #606266;
+    padding: 8px 15px;
+    text-align: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    @include m(primary) {
+        background-color: #409eff;
+        color: white;
+
+        @include when(disabled) {
+            cursor: not-allowed;
+            background-color: #a0cfff;
+        }
+    }
+}
